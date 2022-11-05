@@ -38,16 +38,21 @@ main {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    cursor: pointer;
 }
 
-#X1Y1, #X2Y1, #X3Y1 {
+#Y1X1, #Y2X1, #Y3X1 {
     border-right: 2px solid black;
 }
 
-#X1Y3, #X2Y3, #X3Y3 {
+#Y1X3, #Y2X3, #Y3X3 {
     border-left: 2px solid black;
 }
 
-#X3Y1, #X3Y2, #X3Y3 {
+#Y3X1, #Y3X2, #Y3X3 {
     border-bottom: none;
 }
