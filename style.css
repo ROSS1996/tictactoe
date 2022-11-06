@@ -12,6 +12,7 @@ header {
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 96vh;
@@ -45,14 +46,14 @@ main {
     cursor: pointer;
 }
 
-#Y1X1, #Y2X1, #Y3X1 {
+#R1C1, #R2C1, #R3C1 {
     border-right: 2px solid black;
 }
 
-#Y1X3, #Y2X3, #Y3X3 {
+#R1C3, #R2C3, #R3C3 {
     border-left: 2px solid black;
 }
 
-#Y3X1, #Y3X2, #Y3X3 {
+#R3C1, #R3C2, #R3C3 {
     border-bottom: none;
 }
