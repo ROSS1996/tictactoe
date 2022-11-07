@@ -26,8 +26,7 @@ function changeField(element) {
     }
     if (turn > 2 && locked == false) {
         checkRows(element)
-        checkDiagonals(element, 'l')
-        checkDiagonals(element, 'r')
+        checkDiagonals(element)
     }
     if (checkFields(element) == true) {
         setTimeout(function () { clearFields(element) }, 1500);
@@ -47,21 +46,17 @@ function checkRows(element) {
     }
 }
 
-function checkDiagonals(element, side) {
-    if (side == 'l') {
-        let movements = []
-        for (i = 0; i < 9; i += 4) {
-            movements.push(fields[i].innerText)
-        }
-        checkWinner(element, movements)
+function checkDiagonals(element) {
+    let movements = []
+    for (i = 0; i < 9; i += 4) {
+        movements.push(fields[i].innerText)
     }
-    else if (side == 'r') {
-        let movements = []
-        for (i = 8; i >= 0; i -= 4) {
-            movements.push(fields[i].innerText)
-        }
-        checkWinner(element, movements)
+    checkWinner(element, movements)
+    movements = []
+    for (i = 6; i >= 2; i -= 2) {
+        movements.push(fields[i].innerText)
     }
+    checkWinner(element, movements)
 }
 
 function checkWinner(element, movements) {
