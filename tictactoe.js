@@ -26,6 +26,7 @@ function changeField(element) {
     }
     if (turn > 2 && locked == false) {
         checkRows(element)
+        checkColumns(element)
         checkDiagonals(element)
     }
     if (checkFields(element) == true) {
@@ -81,27 +82,17 @@ function checkWinner(element, movements) {
     }
 }
 
-/*
-function checkColumns (element) {
-    for (i = 0; i < 9; i += 3) {
-        console.log(`coluna ${i}`)
-        let columns = []
-        for (j = 0; j < 3 ; j ++) {
-            console.log(`${fields[i+j].id} : ${fields[i+j].innerText}`)
-            columns.push(fields[i+j].innerText)
-            //console.log(`I: ${i} | J: ${j}`)
 
-        }
-        console.log(`I: ${i} | J: ${j}`)
-        console.log(`Ola ${i+j}: ${columns}`)
-        if (j == 2) {
-            if (columns[0] == columns[1] && columns[1] == columns[2]) {
-                winner = row[0]
-            }
+function checkColumns (element) {
+    for (i = 0; i < 3; i++) {
+        let columns = []
+        for (j = 0; j < 9 ; j += 3) {
+            columns.push(fields[i+j].innerText)
+            checkWinner(element, columns)
         }
     }
 }
-*/
+
 
 function checkFields(element) {
     for (const field of fields) {
