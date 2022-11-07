@@ -17,6 +17,7 @@ main {
     align-items: center;
     height: 96vh;
     background-color: lightgrey;
+    gap: 10px
 }
 
 .game {
@@ -58,6 +59,10 @@ main {
     border-bottom: none;
 }
 
+.winner {
+    background-color: lightgreen;
+}
+
 #scoreboard {
     width: 400px;
     height: 200px;
@@ -84,4 +89,13 @@ main {
 .scoreCounter {
     text-align: center;
     font-size: 2rem;
+}
+
+#reset {
+    width: 200px;
+    height: 30px;
+    background-color: brown;
+    color: white;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
