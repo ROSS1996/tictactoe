@@ -57,3 +57,31 @@ main {
 #R3C1, #R3C2, #R3C3 {
     border-bottom: none;
 }
+
+#scoreboard {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid black;
+    padding: 20px;
+    background-color: lightblue;
+}
+.score h2 {
+    font-size: 2rem;
+}
+
+.scoreCounter {
+    text-align: center;
+    font-size: 2rem;
+}
